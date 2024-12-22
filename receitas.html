@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="receitas.css">
+    <title>Receitas da vovó</title>
+</head>
+<body>
+    <h1>Receitas da vovó</h1>
+    <div>
+        <select id="categorySelect">
+            <option value="all">Todas</option>
+            <option value="doces">Doces</option>
+            <option value="salgados">Salgados</option>
+        </select>
+        <input type="text" id="searchInput" placeholder="Buscar receita...">
+        <button id="searchButton">Buscar</button>
+    </div>
+    <div id="receitasContainer"></div>
+    <script src="receitas.js"></script>
+</body>
+</html>

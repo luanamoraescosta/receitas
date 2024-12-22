@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.doces, .salgados {
+    margin-bottom: 20px;
+}
+
+.receita {
+    background-color: #f2f2f2;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.titulo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.ingredientes, .modosdefazer {
+    margin-top: 10px;
+}

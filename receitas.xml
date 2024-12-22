@@ -1,0 +1,26 @@
+<receitas>
+    <doces>
+        <receita id='1'>
+            <titulo>Bolo de banana sem farinha</titulo>
+            <ingredientes>
+                <item>4 bananas</item>
+                <item>4 ovos</item>
+            </ingredientes>
+            <modosdefazer>
+                Aqueça no fogo por 30 minutos
+            </modosdefazer>
+        </receita>
+    </doces>
+    <salgados>
+        <receita id='2'>
+            <titulo>macarrão ao pesto</titulo>
+            <ingredientes>
+                <item>manjerição</item>
+                <item>nozes</item>
+            </ingredientes>
+            <modosdefazer>
+                Bata no liquidificador
+            </modosdefazer>
+        </receita>
+    </salgados>
+</receitas>
