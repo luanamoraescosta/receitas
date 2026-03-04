@@ -1,101 +1,130 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const xmlData = `
-    <receitas>
-        <doces>
-            <receita id="1">
-                <titulo>Bolo de banana sem farinha</titulo>
-                <ingredientes>
-                    <item>4 bananas</item>
-                    <item>4 ovos</item>
-                </ingredientes>
-                <modosdefazer>
-                    Aqueça no fogo por 30 minutos
-                </modosdefazer>
-            </receita>
-        </doces>
-        <salgados>
-            <receita id="2">
-                <titulo>Macarrão ao pesto</titulo>
-                <ingredientes>
-                    <item>manjerição</item>
-                    <item>nozes</item>
-                </ingredientes>
-                <modosdefazer>
-                    Bata no liquidificador
-                </modosdefazer>
-            </receita>
-        </salgados>
-    </receitas>
-    `;
-
-    const parser = new DOMParser();
-    const xmlDoc = parser.parseFromString(xmlData, "text/xml");
-
     const receitasContainer = document.getElementById("receitasContainer");
     const searchInput = document.getElementById("searchInput");
     const searchButton = document.getElementById("searchButton");
     const categorySelect = document.getElementById("categorySelect");
 
-    // Função para adicionar receitas ao contêiner
-    const appendRecipes = (category) => {
-        const receitas = category.getElementsByTagName("receita");
-        let receitasHTML = '';
+    // Carrega o XML externo
+    fetch('receitas.xml')
+        .then(res => res.text())
+        .then(xmlString => {
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(xmlString, "text/xml");
+            renderReceitas(xmlDoc);
+            popularCategorias(xmlDoc);
+        })
+        .catch(err => {
+            receitasContainer.innerHTML = '<p>Erro ao carregar as receitas.</p>';
+            console.error(err);
+        });
 
-        for (let receita of receitas) {
-            const titulo = receita.getElementsByTagName("titulo")[0].textContent;
-            const ingredientes = receita.getElementsByTagName("ingredientes")[0].getElementsByTagName("item");
-            const modosdefazer = receita.getElementsByTagName("modosdefazer")[0].textContent;
-
-            // Criar lista de ingredientes
-            let ingredientsList = '<ul>';
-            for (let item of ingredientes) {
-                ingredientsList += `<li>${item.textContent}</li>`;
-            }
-            ingredientsList += '</ul>';
-
-            // Montar a estrutura HTML da receita
-            receitasHTML += `
-                <div class="receita" data-titulo="${titulo.toLowerCase()}" data-categoria="${category.nodeName.toLowerCase()}">
-                    <div class="titulo">${titulo}</div>
-                    <div class="ingredientes"><strong>Ingredientes:</strong>${ingredientsList}</div>
-                    <div class="modosdefazer"><strong>Modo de fazer:</strong> ${modosdefazer}</div>
-                </div>
-            `;
-        }
-
-        return receitasHTML;
-    };
-
-    // Adiciona todas as receitas ao contêiner
-    receitasContainer.innerHTML = appendRecipes(xmlDoc.getElementsByTagName("doces")[0]) +
-                                  appendRecipes(xmlDoc.getElementsByTagName("salgados")[0]);
-
-    // Função para filtrar receitas
-    const filterRecipes = () => {
-        const searchTerm = searchInput.value.toLowerCase();
-        const selectedCategory = categorySelect.value;
-        const todasReceitas = document.querySelectorAll('.receita');
-
-        todasReceitas.forEach(receita => {
-            const titulo = receita.getAttribute('data-titulo');
-            const categoria = receita.getAttribute('data-categoria');
-
-            // Verificar se a receita corresponde ao filtro de categoria
-            const categoryMatch = selectedCategory === "all" || selectedCategory === categoria;
-
-            // Verificar se a receita corresponde ao termo de busca
-            const searchMatch = titulo.includes(searchTerm);
-
-            // Mostrar ou esconder a receita
-            if (categoryMatch && searchMatch) {
-                receita.style.display = "block"; // mostra a receita
-            } else {
-                receita.style.display = "none"; // oculta a receita
-            }
+    // Popula o select de categorias dinamicamente a partir do XML
+    const popularCategorias = (xmlDoc) => {
+        const todasReceitas = xmlDoc.querySelectorAll('receita');
+        const categorias = new Set();
+        todasReceitas.forEach(r => {
+            const cat = r.querySelector('categoria')?.textContent.trim();
+            if (cat) categorias.add(cat);
+        });
+        categorias.forEach(cat => {
+            const option = document.createElement('option');
+            option.value = cat;
+            option.textContent = cat.charAt(0).toUpperCase() + cat.slice(1);
+            categorySelect.appendChild(option);
         });
     };
 
-    // Adiciona eventos
+    // Renderiza todas as receitas no container
+    const renderReceitas = (xmlDoc) => {
+        const todasReceitas = xmlDoc.querySelectorAll('receita');
+        let html = '';
+        todasReceitas.forEach(receita => {
+            html += buildReceitaHTML(receita);
+        });
+        receitasContainer.innerHTML = html;
+    };
+
+    // Monta o HTML de uma receita
+    const buildReceitaHTML = (receita) => {
+        const id         = receita.getAttribute('id') || '';
+        const status     = receita.getAttribute('status') || '';
+        const titulo     = receita.querySelector('titulo')?.textContent.trim() || '';
+        const categoria  = receita.querySelector('categoria')?.textContent.trim() || '';
+        const dific      = receita.querySelector('dificuldade')?.textContent.trim();
+        const preparo    = receita.querySelector('tempo_preparo')?.textContent.trim();
+        const cozimento  = receita.querySelector('tempo_cozimento')?.textContent.trim();
+        const porcoes    = receita.querySelector('porcoes')?.textContent.trim();
+        const calorias   = receita.querySelector('calorias_por_porcao')?.textContent.trim();
+
+        // Meta info (só exibe campos que existem)
+        let metaHTML = '<div class="meta">';
+        if (categoria)  metaHTML += `<span class="tag categoria">${categoria}</span>`;
+        if (dific)      metaHTML += `<span class="tag dificuldade">${dific}</span>`;
+        if (preparo)    metaHTML += `<span class="tag tempo">⏱ Preparo: ${preparo}</span>`;
+        if (cozimento)  metaHTML += `<span class="tag tempo">🔥 Cozimento: ${cozimento}</span>`;
+        if (porcoes)    metaHTML += `<span class="tag porcoes">🍽 ${porcoes} porções</span>`;
+        if (calorias)   metaHTML += `<span class="tag calorias">~${calorias} kcal/porção</span>`;
+        metaHTML += '</div>';
+
+        // Ingredientes agrupados
+        let ingredientesHTML = '<div class="ingredientes"><strong>Ingredientes</strong>';
+        const grupos = receita.querySelectorAll('grupo');
+        grupos.forEach(grupo => {
+            const nomeGrupo = grupo.getAttribute('nome');
+            // Só mostra o título do grupo se houver mais de um grupo
+            if (grupos.length > 1) {
+                ingredientesHTML += `<p class="grupo-nome">${nomeGrupo}</p>`;
+            }
+            ingredientesHTML += '<ul>';
+            grupo.querySelectorAll('ingrediente').forEach(ing => {
+                ingredientesHTML += `<li>${ing.textContent.trim()}</li>`;
+            });
+            ingredientesHTML += '</ul>';
+        });
+        ingredientesHTML += '</div>';
+
+        // Modo de preparo
+        const passos = receita.querySelectorAll('passo');
+        let modoPrepHTML = '';
+        if (passos.length > 0) {
+            modoPrepHTML = '<div class="modo-preparo"><strong>Modo de preparo</strong><ol>';
+            passos.forEach(passo => {
+                const etapa = passo.getAttribute('etapa');
+                const label = etapa ? `<span class="etapa-label">${etapa}:</span> ` : '';
+                modoPrepHTML += `<li>${label}${passo.textContent.trim()}</li>`;
+            });
+            modoPrepHTML += '</ol></div>';
+        }
+
+        const statusClass = status === 'anotacao' ? ' anotacao' : '';
+
+        return `
+            <div class="receita${statusClass}"
+                 data-titulo="${titulo.toLowerCase()}"
+                 data-categoria="${categoria.toLowerCase()}"
+                 id="receita-${id}">
+                <div class="titulo">${titulo}${status === 'anotacao' ? ' <span class="badge-anotacao">anotação</span>' : ''}</div>
+                ${metaHTML}
+                ${ingredientesHTML}
+                ${modoPrepHTML}
+            </div>
+        `;
+    };
+
+    // Filtra receitas por categoria e termo de busca
+    const filterRecipes = () => {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        const selectedCategory = categorySelect.value;
+        document.querySelectorAll('.receita').forEach(receita => {
+            const titulo    = receita.getAttribute('data-titulo');
+            const categoria = receita.getAttribute('data-categoria');
+            const categoryMatch = selectedCategory === 'all' || selectedCategory === categoria;
+            const searchMatch   = titulo.includes(searchTerm);
+            receita.style.display = (categoryMatch && searchMatch) ? 'block' : 'none';
+        });
+    };
+
     searchButton.addEventListener('click', filterRecipes);
+    searchInput.addEventListener('keydown', e => { if (e.key === 'Enter') filterRecipes(); });
     categorySelect.addEventListener('change', filterRecipes);
 });
