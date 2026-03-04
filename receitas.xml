@@ -431,7 +431,7 @@
 
   <receita id="bolo-carrolho" status="anotacao">
     <titulo>Bolo carrollho</titulo>
-    <categoria></categoria>
+    <categoria>sobremesa</categoria>
     <dificuldade></dificuldade>
     <tempo_preparo></tempo_preparo>
     <tempo_cozimento></tempo_cozimento>
