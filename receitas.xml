@@ -1,26 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <receitas>
-    <doces>
-        <receita id='1'>
-            <titulo>Bolo de banana sem farinha</titulo>
-            <ingredientes>
-                <item>4 bananas</item>
-                <item>4 ovos</item>
-            </ingredientes>
-            <modosdefazer>
-                Aqueça no fogo por 30 minutos
-            </modosdefazer>
-        </receita>
-    </doces>
-    <salgados>
-        <receita id='2'>
-            <titulo>macarrão ao pesto</titulo>
-            <ingredientes>
-                <item>manjerição</item>
-                <item>nozes</item>
-            </ingredientes>
-            <modosdefazer>
-                Bata no liquidificador
-            </modosdefazer>
-        </receita>
-    </salgados>
+
+  <receita id="carolina-com-sorvete-e-calda">
+    <titulo>Carolina com sorvete e calda</titulo>
+    <categoria>sobremesa</categoria>
+    <dificuldade></dificuldade>
+    <tempo_preparo>45 minutos</tempo_preparo>
+    <tempo_cozimento></tempo_cozimento>
+    <porcoes>4</porcoes>
+    <calorias_por_porcao>486</calorias_por_porcao>
+    <ingredientes>
+      <grupo nome="Massa">
+        <ingrediente>1/4 de xícara (chá) de manteiga</ingrediente>
+        <ingrediente>1/2 xícara (chá) de água</ingrediente>
+        <ingrediente>1 pitada de sal</ingrediente>
+        <ingrediente>1/2 xícara (chá) de farinha de trigo</ingrediente>
+        <ingrediente>2 ovos</ingrediente>
+      </grupo>
+      <grupo nome="Calda">
+        <ingrediente>3/4 de xícara (chá) de licor de cassis</ingrediente>
+        <ingrediente>1/4 de xícara (chá) de água</ingrediente>
+        <ingrediente>1 colher (sopa) de açúcar</ingrediente>
+      </grupo>
+      <grupo nome="Recheio">
+        <ingrediente>1 xícara (chá) de sorvete de creme</ingrediente>
+      </grupo>
+    </ingredientes>
+    <modo_preparo>
+      <passo ordem="1">Aqueça o forno.</passo>
+      <passo ordem="2">Numa panela, derreta a manteiga com a água e o sal em fogo alto.</passo>
+      <passo ordem="3">Retire do fogo, junte a farinha de trigo e misture.</passo>
+      <passo ordem="4">Volte ao fogo, sem parar de mexer, até desprender do fundo.</passo>
+      <passo ordem="5">Despeje numa tigela e junte os ovos.</passo>
+      <passo ordem="6">Misture com colher de pau até ficar homogêneo.</passo>
+      <passo ordem="7">Ponha no saco de confeitar e faça as carolinas (8 montinhos com cerca de 5 cm de diâmetro, distantes um do outro).</passo>
+      <passo ordem="8">Asse até dourar. Retire do forno e reserve.</passo>
+      <passo ordem="9" etapa="Calda">Misture os ingredientes e cozinhe em fogo médio até engrossar. Reserve.</passo>
+      <passo ordem="10" etapa="Montagem">Corte as carolinas ao meio, recheie com sorvete e cubra com a calda. Sirva.</passo>
+    </modo_preparo>
+  </receita>
+
+  <receita id="fritada-de-legumes">
+    <titulo>Fritada de legumes</titulo>
+    <categoria>prato principal</categoria>
+    <dificuldade></dificuldade>
+    <tempo_preparo>45 minutos</tempo_preparo>
+    <tempo_cozimento>30 minutos</tempo_cozimento>
+    <porcoes>4</porcoes>
+    <calorias_por_porcao>150</calorias_por_porcao>
+    <ingredientes>
+      <grupo nome="Ingredientes">
+        <ingrediente>2 batatas médias sem casca, raladas</ingrediente>
+        <ingrediente>1 cenoura média sem casca, ralada</ingrediente>
+        <ingrediente>1 cebola média ralada</ingrediente>
+        <ingrediente>2 colheres (sopa) de azeite</ingrediente>
+        <ingrediente>Sal e pimenta-do-reino a gosto</ingrediente>
+        <ingrediente>3 ovos</ingrediente>
+        <ingrediente>1 colher (sopa) de farinha de trigo</ingrediente>
+        <ingrediente>1 colher (chá) de fermento em pó</ingrediente>
+      </grupo>
+    </ingredientes>
+    <modo_preparo>
+      <passo ordem="1">Em uma tigela, misture a batata, a cenoura, a cebola, o azeite, o sal e a pimenta. Reserve.</passo>
+      <passo ordem="2">Bata os ovos com a farinha e o fermento.</passo>
+      <passo ordem="3">Em uma frigideira antiaderente e untada com um pouco de óleo, coloque os legumes.</passo>
+      <passo ordem="4">Por cima, despeje os ovos batidos e leve ao fogo.</passo>
+      <passo ordem="5">Cozinhe em fogo baixo, com a frigideira tampada, por 30 minutos ou até ficar firme e dourar.</passo>
+      <passo ordem="6">Na metade do tempo, vire a fritada para dourar por igual.</passo>
+      <passo ordem="7">Sirva.</passo>
+    </modo_preparo>
+  </receita>
+
+  <receita id="mousse-mesclado-com-morango">
+    <titulo>Mousse mesclado com morango</titulo>
+    <categoria>sobremesa</categoria>
+    <dificuldade></dificuldade>
+    <tempo_preparo></tempo_preparo>
+    <tempo_cozimento></tempo_cozimento>
+    <porcoes></porcoes>
+    <calorias_por_porcao></calorias_por_porcao>
+    <ingredientes>
+      <grupo nome="Brigadeiro branco">
+        <ingrediente>2 latas de leite condensado</ingrediente>
+        <ingrediente>2 colheres de sopa de margarina (cheias)</ingrediente>
+      </grupo>
+      <grupo nome="Mousse">
+        <ingrediente>1 barra de chocolate branco</ingrediente>
+        <ingrediente>1 barra de chocolate ao leite</ingrediente>
+        <ingrediente>1 barra de chocolate meio amargo</ingrediente>
+        <ingrediente>10 ovos</ingrediente>
+        <ingrediente>200 g de manteiga sem sal</ingrediente>
+      </grupo>
+      <grupo nome="Montagem">
+        <ingrediente>2 caixas de morangos</ingrediente>
+      </grupo>
+    </ingredientes>
+    <modo_preparo>
+      <passo ordem="1" etapa="Brigadeiro branco">Coloque 2 latas de leite condensado com 2 gemas e 2 colheres de margarina; mexa até desgrudar do fundo da panela.</passo>
+      <passo ordem="2">Coloque em pirex bem grande.</passo>
+      <passo ordem="3">Corte os morangos ao meio e cubra o brigadeiro branco.</passo>
+      <passo ordem="4">Derreta os chocolates em banho-maria em panelas separadas.</passo>
+      <passo ordem="5">Misture: chocolate branco com 3 gemas e 1/3 da manteiga sem sal; chocolate (ao leite + meio amargo) com 6 gemas e 2/3 da manteiga.</passo>
+      <passo ordem="6">Bata 9 claras em neve.</passo>
+      <passo ordem="7">Após derreter os chocolates, desligue as panelas e misture 6 claras em neve no chocolate escuro e 3 claras em neve no chocolate branco (suavemente).</passo>
+      <passo ordem="8">Coloque o chocolate escuro sobre o morango e depois o chocolate branco por cima; com um garfo, vá mesclando.</passo>
+      <passo ordem="9">Leve à geladeira por 6 horas.</passo>
+    </modo_preparo>
+  </receita>
+
+  <receita id="minicuscuz">
+    <titulo>Minicuscuz</titulo>
+    <categoria>salgado</categoria>
+    <dificuldade>Fácil</dificuldade>
+    <tempo_preparo>1h30</tempo_preparo>
+    <tempo_cozimento></tempo_cozimento>
+    <porcoes>60</porcoes>
+    <calorias_por_porcao></calorias_por_porcao>
+    <ingredientes>
+      <grupo nome="Ingredientes">
+        <ingrediente>1 cebola picada</ingrediente>
+        <ingrediente>1/2 xícara (chá) de azeite</ingrediente>
+        <ingrediente>1 lata de milho escorrido</ingrediente>
+        <ingrediente>1 lata de palmito picado</ingrediente>
+        <ingrediente>2 latas de atum</ingrediente>
+        <ingrediente>1 tomate picado</ingrediente>
+        <ingrediente>1 xícara (chá) de extrato de tomate</ingrediente>
+        <ingrediente>1 pimentão vermelho picado</ingrediente>
+        <ingrediente>3 cubos de caldo de galinha</ingrediente>
+        <ingrediente>1/2 xícara (chá) de cheiro-verde picado</ingrediente>
+        <ingrediente>5 xícaras (chá) de água fervente</ingrediente>
+        <ingrediente>1 xícara (chá) de azeitonas picadas</ingrediente>
+        <ingrediente>1 lata de ervilha escorrida</ingrediente>
+        <ingrediente>3 ovos cozidos picados</ingrediente>
+        <ingrediente>4 xícaras (chá) de farinha de milho</ingrediente>
+        <ingrediente>1 colher (sopa) de farinha de mandioca</ingrediente>
+        <ingrediente>Sal e pimenta-do-reino a gosto</ingrediente>
+      </grupo>
+    </ingredientes>
+    <modo_preparo>
+      <passo ordem="1">Em uma panela, frite a cebola no azeite por 5 minutos ou até amaciar.</passo>
+      <passo ordem="2">Junte o milho, o palmito, o atum e refogue por 10 minutos.</passo>
+      <passo ordem="3">Junte o tomate, o extrato de tomate, o pimentão, o caldo de galinha, o cheiro-verde e a água fervente.</passo>
+      <passo ordem="4">Tempere com sal e pimenta a gosto.</passo>
+      <passo ordem="5">Ferva; acrescente as azeitonas, a ervilha e os ovos.</passo>
+      <passo ordem="6">Adicione a farinha de milho e a farinha de mandioca e mexa até soltar do fundo da panela.</passo>
+      <passo ordem="7">Espere amornar e coloque em forminhas de empada, apertando bem.</passo>
+      <passo ordem="8">Desenforme e sirva em seguida.</passo>
+    </modo_preparo>
+  </receita>
+
+  <receita id="bolinha-de-mandioca">
+    <titulo>Bolinha de mandioca</titulo>
+    <categoria>salgado</categoria>
+    <dificuldade>Fácil</dificuldade>
+    <tempo_preparo>2h</tempo_preparo>
+    <tempo_cozimento></tempo_cozimento>
+    <porcoes>50</porcoes>
+    <calorias_por_porcao></calorias_por_porcao>
+    <ingredientes>
+      <grupo nome="Ingredientes">
+        <ingrediente>1 kg de mandioca cozida e espremida</ingrediente>
+        <ingrediente>1 lata de patê de presunto (comprado pronto)</ingrediente>
+        <ingrediente>1 colher (sopa) de salsa picada</ingrediente>
+        <ingrediente>2 xícaras (chá) de farinha de rosca</ingrediente>
+        <ingrediente>2 ovos</ingrediente>
+        <ingrediente>Sal e pimenta-do-reino a gosto</ingrediente>
+        <ingrediente>Óleo para fritar</ingrediente>
+      </grupo>
+    </ingredientes>
+    <modo_preparo>
+      <passo ordem="1">Em uma tigela, misture bem todos os ingredientes (menos a farinha e 1 ovo) até ficar homogêneo.</passo>
+      <passo ordem="2">Faça bolinhas, passe no ovo restante batido e na farinha de rosca.</passo>
+      <passo ordem="3">Frite até dourar por igual.</passo>
+      <passo ordem="4">Escorra em papel absorvente e sirva em seguida.</passo>
+    </modo_preparo>
+  </receita>
+
+  <receita id="bolinho-de-abobora">
+    <titulo>Bolinho de abóbora</titulo>
+    <categoria>salgado</categoria>
+    <dificuldade>Fácil</dificuldade>
+    <tempo_preparo>2h</tempo_preparo>
+    <tempo_cozimento></tempo_cozimento>
+    <porcoes>40</porcoes>
+    <calorias_por_porcao></calorias_por_porcao>
+    <ingredientes>
+      <grupo nome="Ingredientes">
+        <ingrediente>1/2 kg de abóbora descascada, cozida e espremida</ingrediente>
+        <ingrediente>1 gema</ingrediente>
+        <ingrediente>2 colheres (sopa) de queijo parmesão ralado</ingrediente>
+        <ingrediente>1 colher (sopa) de manteiga</ingrediente>
+        <ingrediente>1 xícara (chá) de farinha de trigo</ingrediente>
+        <ingrediente>Sal e pimenta-do-reino a gosto</ingrediente>
+        <ingrediente>Óleo para fritar</ingrediente>
+      </grupo>
+    </ingredientes>
+    <modo_preparo>
+      <passo ordem="1">Misture bem todos os ingredientes e faça bolinhas.</passo>
+      <passo ordem="2">Frite em óleo quente até dourar por igual.</passo>
+      <passo ordem="3">Escorra em papel absorvente e sirva em seguida.</passo>
+    </modo_preparo>
+  </receita>
+
+  <receita id="croquete-de-frango">
+    <titulo>Croquete de frango</titulo>
+    <categoria>salgado</categoria>
+    <dificuldade>Fácil</dificuldade>
+    <tempo_preparo>2h</tempo_preparo>
+    <tempo_cozimento></tempo_cozimento>
+    <porcoes>40</porcoes>
+    <calorias_por_porcao></calorias_por_porcao>
+    <ingredientes>
+      <grupo nome="Ingredientes">
+        <ingrediente>2 xícaras (chá) de leite</ingrediente>
+        <ingrediente>1 colher (sopa) de manteiga</ingrediente>
+        <ingrediente>2 colheres (sopa) de farinha de trigo</ingrediente>
+      </grupo>
+    </ingredientes>
+    <modo_preparo>
+      <!-- Modo de preparo não registrado na fonte original -->
+    </modo_preparo>
+  </receita>
+
+  <receita id="torta-salgada-de-liquidificador">
+    <titulo>Torta salgada de liquidificador</titulo>
+    <categoria>torta</categoria>
+    <dificuldade></dificuldade>
+    <tempo_preparo></tempo_preparo>
+    <tempo_cozimento></tempo_cozimento>
+    <porcoes></porcoes>
+    <calorias_por_porcao></calorias_por_porcao>
+    <ingredientes>
+      <grupo nome="Massa">
+        <ingrediente>3 ovos</ingrediente>
+        <ingrediente>1 xícara de leite</ingrediente>
+        <ingrediente>1 xícara de óleo</ingrediente>
+        <ingrediente>12 colheres de farinha de trigo</ingrediente>
+        <ingrediente>2 colheres de fermento em pó</ingrediente>
+        <ingrediente>1 colher (chá) de sal</ingrediente>
+      </grupo>
+      <grupo nome="Recheio">
+        <ingrediente>Recheio a gosto</ingrediente>
+      </grupo>
+    </ingredientes>
+    <modo_preparo>
+      <passo ordem="1">Bata tudo no liquidificador, coloque numa forma e adicione o recheio que quiser.</passo>
+    </modo_preparo>
+  </receita>
+
+  <receita id="calda-de-moca">
+    <titulo>Calda de moça</titulo>
+    <categoria>calda</categoria>
+    <dificuldade></dificuldade>
+    <tempo_preparo></tempo_preparo>
+    <tempo_cozimento></tempo_cozimento>
+    <porcoes></porcoes>
+    <calorias_por_porcao></calorias_por_porcao>
+    <ingredientes>
+      <grupo nome="Ingredientes">
+        <ingrediente>3 copos de açúcar</ingrediente>
+        <ingrediente>1 copo de água</ingrediente>
+        <ingrediente>1/2 lata de leite condensado</ingrediente>
+        <ingrediente>6 gomas</ingrediente>
+      </grupo>
+    </ingredientes>
+    <modo_preparo>
+      <passo ordem="1">Misture o açúcar e a água, mexendo e apurando bem até engrossar.</passo>
+      <passo ordem="2">Acrescente o leite condensado e as gomas e continue mexendo até atingir o ponto desejado.</passo>
+    </modo_preparo>
+  </receita>
+
+  <receita id="torta-mineira">
+    <titulo>Torta mineira</titulo>
+    <categoria>sobremesa</categoria>
+    <dificuldade></dificuldade>
+    <tempo_preparo>30 minutos</tempo_preparo>
+    <tempo_cozimento>30 minutos</tempo_cozimento>
+    <porcoes>8</porcoes>
+    <calorias_por_porcao></calorias_por_porcao>
+    <ingredientes>
+      <grupo nome="Massa">
+        <ingrediente>1 pacote de biscoito tipo maizena triturado</ingrediente>
+        <ingrediente>100 g de margarina</ingrediente>
+      </grupo>
+      <grupo nome="Recheio">
+        <ingrediente>150 g de queijo branco fresco</ingrediente>
+        <ingrediente>2 ovos</ingrediente>
+        <ingrediente>1 caixa de creme de leite</ingrediente>
+        <ingrediente>1/2 xícara (chá) de açúcar</ingrediente>
+        <ingrediente>1 colher (sopa) de amido de milho</ingrediente>
+      </grupo>
+      <grupo nome="Cobertura">
+        <ingrediente>1/2 xícara (chá) de água</ingrediente>
+        <ingrediente>150 g de goiabada picada</ingrediente>
+      </grupo>
+    </ingredientes>
+    <modo_preparo>
+      <passo ordem="1" etapa="Massa">Aqueça o forno a 200°C. Misture o biscoito triturado e a margarina até formar uma farofa bem úmida.</passo>
+      <passo ordem="2" etapa="Massa">Forre com a farofa o fundo e as laterais de uma forma de aro removível de 24 cm.</passo>
+      <passo ordem="3" etapa="Recheio">No liquidificador, bata o queijo, os ovos, o creme de leite, o açúcar e o amido de milho. Despeje sobre a massa e leve ao forno por 30 minutos ou até dourar. Deixe esfriar.</passo>
+      <passo ordem="4" etapa="Cobertura">Em uma panela, ponha a água e a goiabada em fogo baixo, mexendo sempre até derreter. Deixe amornar, ponha sobre a torta e sirva gelada.</passo>
+    </modo_preparo>
+  </receita>
+
+  <receita id="massa-basica-para-torta">
+    <titulo>Massa básica para torta</titulo>
+    <categoria>massa</categoria>
+    <dificuldade></dificuldade>
+    <tempo_preparo></tempo_preparo>
+    <tempo_cozimento></tempo_cozimento>
+    <porcoes></porcoes>
+    <calorias_por_porcao></calorias_por_porcao>
+    <ingredientes>
+      <grupo nome="Ingredientes">
+        <ingrediente>2 xícaras e meia de farinha de trigo</ingrediente>
+        <ingrediente>1 colher (sopa) rasa de fermento</ingrediente>
+        <ingrediente>1 colher (chá) de sal</ingrediente>
+        <ingrediente>1/2 xícara de azeite</ingrediente>
+        <ingrediente>2 ovos inteiros</ingrediente>
+        <ingrediente>Leite para dar liga</ingrediente>
+      </grupo>
+    </ingredientes>
+    <modo_preparo>
+      <!-- Modo de preparo não registrado na fonte original -->
+    </modo_preparo>
+  </receita>
+
+  <receita id="pave-de-amendoim">
+    <titulo>Pavê de amendoim</titulo>
+    <categoria>sobremesa</categoria>
+    <dificuldade></dificuldade>
+    <tempo_preparo></tempo_preparo>
+    <tempo_cozimento></tempo_cozimento>
+    <porcoes></porcoes>
+    <calorias_por_porcao></calorias_por_porcao>
+    <ingredientes>
+      <grupo nome="Base">
+        <ingrediente>1 lata de doce de leite</ingrediente>
+      </grupo>
+      <grupo nome="Camadas">
+        <ingrediente>Creme de pavê</ingrediente>
+        <ingrediente>Bolacha champanhe (ou outra)</ingrediente>
+        <ingrediente>Chantilly ou creme de leite</ingrediente>
+      </grupo>
+      <grupo nome="Farofa de amendoim">
+        <ingrediente>1 pacote de amendoim</ingrediente>
+        <ingrediente>1 xícara de açúcar</ingrediente>
+        <ingrediente>1 xícara de farinha de milho</ingrediente>
+      </grupo>
+    </ingredientes>
+    <modo_preparo>
+      <passo ordem="1">Forre o refratário com 1 lata de doce de leite.</passo>
+      <passo ordem="2">Faça uma camada do creme de pavê.</passo>
+      <passo ordem="3">Faça uma camada de bolacha.</passo>
+      <passo ordem="4">Faça outra camada do creme.</passo>
+      <passo ordem="5">Cubra com chantilly ou creme de leite.</passo>
+      <passo ordem="6" etapa="Farofa">Descasque o amendoim e moa com 1 xícara de açúcar e 1 xícara de farinha de milho; coloque por cima do pavê na hora de servir.</passo>
+    </modo_preparo>
+  </receita>
+
+  <!-- ==================== ANOTAÇÕES (receitas incompletas) ==================== -->
+
+  <receita id="salada-marroquina" status="anotacao">
+    <titulo>Salada marroquina</titulo>
+    <categoria>salada</categoria>
+    <dificuldade></dificuldade>
+    <tempo_preparo></tempo_preparo>
+    <tempo_cozimento></tempo_cozimento>
+    <porcoes></porcoes>
+    <calorias_por_porcao></calorias_por_porcao>
+    <ingredientes>
+      <grupo nome="Ingredientes">
+        <ingrediente>Farinha de quibe</ingrediente>
+        <ingrediente>Peito desfiado</ingrediente>
+        <ingrediente>Milho verde</ingrediente>
+        <ingrediente>Cheiro-verde</ingrediente>
+        <ingrediente>Maionese</ingrediente>
+      </grupo>
+    </ingredientes>
+    <modo_preparo>
+      <!-- Modo de preparo não registrado na fonte original -->
+    </modo_preparo>
+  </receita>
+
+  <receita id="salada-tropical" status="anotacao">
+    <titulo>Salada tropical</titulo>
+    <categoria>salada</categoria>
+    <dificuldade></dificuldade>
+    <tempo_preparo></tempo_preparo>
+    <tempo_cozimento></tempo_cozimento>
+    <porcoes></porcoes>
+    <calorias_por_porcao></calorias_por_porcao>
+    <ingredientes>
+      <grupo nome="Ingredientes">
+        <ingrediente>Alface picada</ingrediente>
+        <ingrediente>Peito de galinha</ingrediente>
+        <ingrediente>Abacaxi</ingrediente>
+        <ingrediente>Laranja</ingrediente>
+        <ingrediente>Molho de maionese com catchup</ingrediente>
+        <ingrediente>Batata palha</ingrediente>
+      </grupo>
+    </ingredientes>
+    <modo_preparo>
+      <!-- Modo de preparo não registrado na fonte original -->
+    </modo_preparo>
+  </receita>
+
+  <receita id="salada-tropical-falsa" status="anotacao">
+    <titulo>Salada tropical falsa</titulo>
+    <categoria>salada</categoria>
+    <dificuldade></dificuldade>
+    <tempo_preparo></tempo_preparo>
+    <tempo_cozimento></tempo_cozimento>
+    <porcoes></porcoes>
+    <calorias_por_porcao></calorias_por_porcao>
+    <ingredientes>
+      <grupo nome="Ingredientes">
+        <ingrediente>Alface</ingrediente>
+        <ingrediente>Maçã</ingrediente>
+        <ingrediente>Abacaxi</ingrediente>
+        <ingrediente>Laranja</ingrediente>
+        <ingrediente>Molho rosê</ingrediente>
+        <ingrediente>Cenoura em palito</ingrediente>
+      </grupo>
+    </ingredientes>
+    <modo_preparo>
+      <passo ordem="1">Monte com alface, frutas, molho rosê por cima e cenoura em palitos.</passo>
+    </modo_preparo>
+  </receita>
+
+  <receita id="bolo-carrolho" status="anotacao">
+    <titulo>Bolo carrollho</titulo>
+    <categoria></categoria>
+    <dificuldade></dificuldade>
+    <tempo_preparo></tempo_preparo>
+    <tempo_cozimento></tempo_cozimento>
+    <porcoes></porcoes>
+    <calorias_por_porcao></calorias_por_porcao>
+    <ingredientes>
+      <grupo nome="Ingredientes">
+        <ingrediente>Peito de galinha defumado</ingrediente>
+        <ingrediente>Milho verde</ingrediente>
+        <ingrediente>Palmito</ingrediente>
+        <ingrediente>Presunto</ingrediente>
+        <ingrediente>Pimenta vermelha</ingrediente>
+        <ingrediente>Cheiro-verde</ingrediente>
+        <ingrediente>Azeitona</ingrediente>
+        <ingrediente>Creme de leite</ingrediente>
+      </grupo>
+    </ingredientes>
+    <modo_preparo>
+      <!-- Modo de preparo não registrado na fonte original -->
+    </modo_preparo>
+  </receita>
+
 </receitas>
